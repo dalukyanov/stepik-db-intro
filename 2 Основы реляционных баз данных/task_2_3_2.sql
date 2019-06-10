@@ -30,6 +30,6 @@ SELECT * FROM A
 select c.first_name, c.last_name, count(*) as "new_sale_num"
 from client c
 	inner join sale s on c.id = s.client_id
-    inner join status st on s.status_id = st.id
+	inner join status st on s.status_id = st.id
 where st.name = 'new'
 group by c.first_name, c.last_name;
